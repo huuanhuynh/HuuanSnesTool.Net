@@ -1,0 +1,17 @@
+G:\Dropbox\Softs\SnesTool.Net\bin\Debug\SnesTool.Net.exe
+G:\Dropbox\Softs\SnesTool.Net\bin\Debug\SnesTool.Net.pdb
+G:\Dropbox\Softs\SnesTool.Net\obj\Debug\SnesTool.Net.Form1.resources
+G:\Dropbox\Softs\SnesTool.Net\obj\Debug\SnesTool.Net.csproj.GenerateResource.Cache
+G:\Dropbox\Softs\SnesTool.Net\obj\Debug\SnesTool.Net.exe
+G:\Dropbox\Softs\SnesTool.Net\obj\Debug\SnesTool.Net.pdb
+D:\Dropbox\Softs\SnesTool.Net\obj\Debug\SnesTool.Net.exe
+D:\Dropbox\Softs\SnesTool.Net\obj\Debug\SnesTool.Net.pdb
+D:\Dropbox\Softs\SnesTool.Net\obj\Debug\SnesTool.Net.csprojResolveAssemblyReference.cache
+D:\Dropbox\Softs\SnesTool.Net\obj\Debug\SnesTool.Net.csproj.GenerateResource.Cache
+D:\Dropbox\Softs\SnesTool.Net\bin\Debug\SnesTool.Net.exe
+D:\Dropbox\Softs\SnesTool.Net\bin\Debug\SnesTool.Net.pdb
+D:\Dropbox\Softs\SnesTool.Net\obj\Debug\SnesTool.Net.FormMain.resources
+D:\Dropbox\Softs\SnesTool.Net\obj\Debug\SnesTool.Net.Form1.resources
+D:\Dropbox\Softs\SnesTool.Net\obj\Debug\SnesTool.Net.FormBAS.resources
+D:\Dropbox\Softs\SnesTool.Net\obj\Debug\SnesTool.Net.FormTran.resources
+D:\Dropbox\Softs\SnesTool.Net\bin\Debug\SnesTool.Net.exe.config
