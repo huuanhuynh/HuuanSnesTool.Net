@@ -45,7 +45,7 @@
             this.lblFileName = new System.Windows.Forms.Label();
             this.lblFileSize = new System.Windows.Forms.Label();
             this.btnTran = new System.Windows.Forms.Button();
-            this.btnSwapTest = new System.Windows.Forms.Button();
+            this.btnBinSwapTest = new System.Windows.Forms.Button();
             this.btnSplit322 = new System.Windows.Forms.Button();
             this.btn1617NES = new System.Windows.Forms.Button();
             this.btnSegaSwap = new System.Windows.Forms.Button();
@@ -134,6 +134,8 @@
             this.btnSnesSwap.Size = new System.Drawing.Size(252, 23);
             this.btnSnesSwap.TabIndex = 6;
             this.btnSnesSwap.Text = "SNES Split and Swap";
+            this.toolTip1.SetToolTip(this.btnSnesSwap, "Cắt rom phục vụ cho reproduction.\r\nFile nạp cho M27C801 đã đảo 1 số chân địa chỉ." +
+        "\r\nFile nạp cho SST39SF040 đã đảo 1 số chân địa chỉ.");
             this.btnSnesSwap.UseVisualStyleBackColor = true;
             this.btnSnesSwap.Click += new System.EventHandler(this.btnSnesSwap_Click);
             // 
@@ -184,15 +186,15 @@
             this.btnTran.UseVisualStyleBackColor = true;
             this.btnTran.Click += new System.EventHandler(this.btnTran_Click);
             // 
-            // btnSwapTest
+            // btnBinSwapTest
             // 
-            this.btnSwapTest.Location = new System.Drawing.Point(24, 283);
-            this.btnSwapTest.Name = "btnSwapTest";
-            this.btnSwapTest.Size = new System.Drawing.Size(252, 23);
-            this.btnSwapTest.TabIndex = 6;
-            this.btnSwapTest.Text = "Đảo bin Test";
-            this.btnSwapTest.UseVisualStyleBackColor = true;
-            this.btnSwapTest.Click += new System.EventHandler(this.btnSwapTest_Click);
+            this.btnBinSwapTest.Location = new System.Drawing.Point(24, 283);
+            this.btnBinSwapTest.Name = "btnBinSwapTest";
+            this.btnBinSwapTest.Size = new System.Drawing.Size(252, 23);
+            this.btnBinSwapTest.TabIndex = 6;
+            this.btnBinSwapTest.Text = "Đảo bin Test";
+            this.btnBinSwapTest.UseVisualStyleBackColor = true;
+            this.btnBinSwapTest.Click += new System.EventHandler(this.btnBinSwapTest_Click);
             // 
             // btnSplit322
             // 
@@ -232,7 +234,7 @@
             this.Controls.Add(this.propertyGrid1);
             this.Controls.Add(this.btnHi2Lo);
             this.Controls.Add(this.btnTran);
-            this.Controls.Add(this.btnSwapTest);
+            this.Controls.Add(this.btnBinSwapTest);
             this.Controls.Add(this.btnC801Swap1618);
             this.Controls.Add(this.btnSplit322);
             this.Controls.Add(this.btnSegaSwap);
@@ -249,7 +251,7 @@
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMain";
-            this.Text = "FormMain";
+            this.Text = "SnesTool.Net2021 Press [E] for English, Bấm nút [V] chuyển về Tiếng Việt.";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -273,7 +275,7 @@
         private System.Windows.Forms.Label lblFileName;
         private System.Windows.Forms.Label lblFileSize;
         private System.Windows.Forms.Button btnTran;
-        private System.Windows.Forms.Button btnSwapTest;
+        private System.Windows.Forms.Button btnBinSwapTest;
         private System.Windows.Forms.Button btnSplit322;
         private System.Windows.Forms.Button btn1617NES;
         private System.Windows.Forms.Button btnSegaSwap;

@@ -61,7 +61,9 @@ namespace SnesTool.Net
             this.label1.Text = "Megabit (max 11)";
             toolTip1.SetToolTip(btnCutUFO, "The program is written based on the results cut from SnesTool (snestl12) software on DOS\r\nso the results may not be accurate.");
             this.button1.Text = "Choose rom";
+            if (lblFileName.Text == "Tên tập tin") lblFileName.Text = "FileName";
             this.btnCutUFO.Text = "Cut";
+            this.btnBinSwapTest.Text = "Swap Binary (test)";
         }
 
         private void Vietnamese()
@@ -70,7 +72,9 @@ namespace SnesTool.Net
             this.label1.Text = "Megabit (tối đa 11)";
             toolTip1.SetToolTip(btnCutUFO, "Chương trình được viết dựa theo kết quả cắt ra từ phần mềm SnesTool (snestl12) trên DOS\r\nnên kết quả có thể không chính xác.");
             this.button1.Text = "Chọn rom";
+            if (lblFileName.Text == "FileName") lblFileName.Text = "Tên tập tin";
             this.btnCutUFO.Text = "Cắt";
+            this.btnBinSwapTest.Text = "Đảo Binary (thử nghiệm)";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -162,7 +166,7 @@ namespace SnesTool.Net
             }
         }
         
-        private void btnSwapTest_Click(object sender, EventArgs e)
+        private void btnBinSwapTest_Click(object sender, EventArgs e)
         {
             if (File.Exists(this.textBox1.Text))
             {
@@ -557,17 +561,17 @@ namespace SnesTool.Net
             return result;
         }
 
-        private byte[] SwapBin8MtoMask_For_27C801(byte[] bin)
+        private byte[] SwapBin8MtoMask_For_27C801(byte[] bin_8M)
         {
             byte[] result = new byte[MEGABYTE];
-            if (bin.Length != MEGABYTE)
+            if (bin_8M.Length != MEGABYTE)
             {
                 throw new Exception("Sai kích thước 8 Megabit (1 Megabyte 0x100000).");
             }
             for (int i = 0; i < MEGABYTE; i++)
             {
                 int newPos = SwapPostC801MtoMASK(i);
-                result[newPos] = bin[i];
+                result[newPos] = bin_8M[i];
             }
             return result;
         }
@@ -575,19 +579,19 @@ namespace SnesTool.Net
         /// <summary>
         /// Dùng cho 0.5 double
         /// </summary>
-        /// <param name="bin"></param>
+        /// <param name="bin_4M"></param>
         /// <returns></returns>
-        private byte[] Swap1618Bin8MtoMask_For_27C801(byte[] bin)
+        private byte[] Swap1618Bin8MtoMask_For_27C801(byte[] bin_4M)
         {
             byte[] result = new byte[MEGABYTE];
-            if (bin.Length != MEGABYTE)
+            if (bin_4M.Length != MEGABYTE)
             {
                 throw new Exception("Sai kích thước 8 Megabit (1 Megabyte 0x100000).");
             }
             for (int i = 0; i < MEGABYTE; i++)
             {
                 int newPos = Swap1618PostC801MtoMASK(i);
-                result[newPos] = bin[i];
+                result[newPos] = bin_4M[i];
             }
             return result;
         }
@@ -599,6 +603,11 @@ namespace SnesTool.Net
             return i;
         }
 
+        /// <summary>
+        /// Đảo các chân 17-19, 16-18.
+        /// </summary>
+        /// <param name="i"></param>
+        /// <returns></returns>
         private int SwapPostC801MtoMASK(int i)
         {
             i = SwapBit(i, 17, 19);
@@ -606,6 +615,11 @@ namespace SnesTool.Net
             return i;
         }
         
+        /// <summary>
+        /// Đảo chân 16-18.
+        /// </summary>
+        /// <param name="i"></param>
+        /// <returns></returns>
         private int Swap1618PostC801MtoMASK(int i)
         {
             i = SwapBit(i, 16, 18);
